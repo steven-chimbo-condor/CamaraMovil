@@ -16,7 +16,7 @@ import java.io.File;
 public class Main2Activity extends AppCompatActivity {
     private ListView lista;
     private ImageView image;
-    private String[] archivos;
+    private String[] archivo;
     private ArrayAdapter<String> adaptador1;
 
 
@@ -28,7 +28,7 @@ public class Main2Activity extends AppCompatActivity {
 
         File dir=getExternalFilesDir(null);
         archivos=dir.list();
-        adaptador1=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,archivos);
+        adaptador1=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,archivo);
         lista=(ListView)findViewById(R.id.listView1);
         lista.setAdapter(adaptador1);
 
