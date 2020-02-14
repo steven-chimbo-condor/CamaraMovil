@@ -27,7 +27,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         File dir=getExternalFilesDir(null);
-        archivos=dir.list();
+        archivo=dir.list();
         adaptador1=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,archivo);
         lista=(ListView)findViewById(R.id.listView1);
         lista.setAdapter(adaptador1);
@@ -37,7 +37,7 @@ public class Main2Activity extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(getExternalFilesDir(null)+"/"+archivos[arg2]);
+                Bitmap bitmap1 = BitmapFactory.decodeFile(getExternalFilesDir(null)+"/"+archivo[arg2]);
                 image.setImageBitmap(bitmap1);
             }
             });
